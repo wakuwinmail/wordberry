@@ -33,7 +33,8 @@ pw = ""
 
 File.open(file_names["raw_text"], "r:utf-8") do |file|
   file.each_line do |sentence|
-    natto.parse(sentence) do |n|
+    next if sentence.size==0
+    natto.parse(sentence.chomp) do |n|
       w = n.surface
       if !bow.key?(w) then #いま見てる単語がbowになければ追加
         bow[w] = bow.size
@@ -49,6 +50,7 @@ File.open(file_names["raw_text"], "r:utf-8") do |file|
   end
 end
 
+#bowと隣接行列のファイルを更新
 n = bow.size
 
 File.open(file_names["bag_of_words"], "w:utf-8") do |file|

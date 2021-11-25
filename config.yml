@@ -1,0 +1,13 @@
+token:
+  consumer_key       : "xxxxxxxxxx"
+  consumer_secret    : "xxxxxxxxxx"
+  access_token       : "xxxxxxxxxx"
+  access_token_secret: "xxxxxxxxxx"
+
+file_name:
+  bag_of_words     : "bow.in"
+  adjacency_matrix : "matrix.in"
+  raw_text         : "rawtext.txt"
+
+dir_name:
+  backup : "backup"
