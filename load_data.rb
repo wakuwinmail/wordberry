@@ -12,3 +12,13 @@ def load_bow(bow_fn)
   end
   return [wtoi, itow]
 end
+
+def load_matrix(mtx_fn)
+  mat = Array.new
+  File.open(mtx_fn, "r:utf-8") do |file|
+    file.each_line do |dat|
+      mat.append(dat.chomp.split(" ").map(&:to_i))
+    end
+  end
+  return mat
+end
