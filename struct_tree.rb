@@ -33,6 +33,7 @@ pw = ""
 
 File.open(file_names["raw_text"], "r:utf-8") do |file|
   file.each_line do |sentence|
+    sentence.chomp!
     next if sentence.size==0
     natto.parse(sentence.chomp) do |n|
       w = n.surface
