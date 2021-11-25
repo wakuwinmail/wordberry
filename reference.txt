@@ -1,0 +1,6 @@
+公式API
+https://developer.twitter.com/en/docs/twitter-api/api-reference-index
+https://developer.twitter.com/en/docs/twitter-api/v1/tweets/search/api-reference/get-search-tweets
+
+Rubyのライブラリ
+https://github.com/sferik/twitter
