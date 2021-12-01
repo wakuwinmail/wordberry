@@ -22,6 +22,7 @@ File.open("#{dir_name}/#{file_name}.txt","w:utf-8") do |file|#データベース
       max_id = tweet.id
       flag=!tweet.truncated?
       #p tweet.text
+      ngwords.rewind
       ngwords.each_line do |words|
         if /#{words.chomp}/ =~ tweet.text
           flag=false
